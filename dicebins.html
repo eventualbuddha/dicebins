@@ -182,7 +182,7 @@ function IsEmpty($var)
 } 
 
 // declare global variables
-var $_GET, $version, $numdice, $numprec, $csv, $err_csv, $skipall, $err_int, $err_range, $err_mod, $err_interval;
+var $_GET, $version, $numdice, $err_numdice, $numprec, $err_numprec, $csv, $err_csv, $skipall, $err_int, $err_range, $err_mod, $err_interval;
 </script>
 
 <script type="text/javascript">
@@ -190,9 +190,9 @@ var $_GET, $version, $numdice, $numprec, $csv, $err_csv, $skipall, $err_int, $er
 $version = "1.2";
 
 //grab certain values from the GET object
-$numdice = $_GET["numdice"];   //number of dice
-$numprec = $_GET["numprec"];   //number of precincts
-$csv     = $_GET["csv"];       //flag for pasteable output
+$numdice = $_GET["numdice"];    //number of dice
+$numprec = $_GET["numprec"];    //number of precincts
+$csv     = $_GET["csv"] || '0'; //flag for pasteable output
 
 /* if nothing is passed, set default number of dice and precincts.  If
    things are passed validate them. */
@@ -500,7 +500,7 @@ if ($csv == 0 || $err_csv) {
 
 <table width="60%"><tr><td>
 
-<p><small>The source code to this script is <a href="dicebins.php.txt">available here</a>, licensed under the <a href="http://www.opensource.org/licenses/bsd-license.php">BSD license</a> (see source for license text).</small></p>
+<p><small>The source code to this script is <a href="https://github.com/votingworks/dicebins/blob/main/dicebins.html">available here</a>, licensed under the <a href="http://www.opensource.org/licenses/bsd-license.php">BSD license</a> (see source for license text).</small></p>
 
 <p><small>This is version ${$version} of <code>dicebins.html</code>.</small></p>
 

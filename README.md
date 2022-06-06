@@ -1,2 +1,2 @@
 # dicebins
-a PHP script for binning rolls of 10-sided dice
+a utility for binning rolls of 10-sided dice
